@@ -1,0 +1,46 @@
+.aside{
+    padding: 10px;
+    padding-inline: 40px;
+    background:hsl(257, 27%, 26%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-image: url(../assets//images/bg-shorten-desktop.svg);
+}
+
+input{
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    font-family: poppins;
+    outline: none;
+    color: inherit;
+}
+
+.aside button{
+    border-radius: 5px;
+}
+
+@media screen and (max-width:768px){
+    .aside{
+        display: block;
+        background-image: url(../assets/images/bg-shorten-mobile.svg);
+    }
+    input{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .aside button{
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .aside{
+        padding-block: 30px;
+    }
+}
