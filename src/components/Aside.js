@@ -1,15 +1,33 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "../styles/aside.css"
-import useFetch  from "./useFetch";
 
 const Aside = () => {
     const url = 'https://app.shrtco.de/v2/shorten?url=https://github.com/kass8mal8'
     const inputRef = useRef()
-    const res = useFetch(url)
-    const handleSubmit =()=> {
-        if (inputRef.current.value == " "){
+    const [data,setData] = useState([])
 
+    const fetchData = async()=> {
+        try{
+            const res = await fetch(url)
+            const data = await res.json()
+            setData(data)
+            console.log(data);
         }
+        catch(error){
+            console.log(error.message)
+        }
+        return data
+    }
+
+    const handleSubmit =(e)=> {
+        e.preventDefault()
+        if (inputRef.current.value === " "){
+            document.querySelector('.aside input').style.borderColor = 'red'
+        }
+        else{
+            fetchData(url)
+        }
+        inputRef.clear()
     }
 
     return ( 
