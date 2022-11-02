@@ -2,6 +2,7 @@ import working from '../assets/images/working.svg'
 import '../styles/main.css'
 
 const Main = () => {
+    
     return (  
         <div className = "main">
             <div>
@@ -12,7 +13,7 @@ const Main = () => {
                 <p> 
                     Build your brand’s recognition and get detailed insights on how your links are performing.
                 </p>
-                <button>Get Started</button>
+                <button> Get Started </button>
 
             </div>
         </div>

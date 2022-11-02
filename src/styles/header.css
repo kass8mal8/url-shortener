@@ -1,0 +1,77 @@
+.header{
+    margin-top: 30px;
+}
+
+.menu{
+    width: 60px;
+    color:hsl(257, 7%, 63%);
+    position:absolute;
+    right: 20px;
+    top: 30px;
+}
+
+.header ul li {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: auto 10px;
+}
+
+.header ul li:hover{
+    cursor: pointer;
+    color: hsl(257, 27%, 26%);
+}
+
+.header nav{
+    position: absolute;
+    top: 30px;
+    left:20%;
+}
+
+@media screen and (min-width:800px) {
+    aside{
+        right: -250%;
+        position: absolute;
+        top: -8px;
+    }
+    aside button{
+        margin-left: 30px;
+    }
+    .menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .header{
+        margin-bottom: 120px;
+    }
+    .logo{
+        position: absolute;
+        left: 30px;
+        top: 35px;
+    }
+    .header ul li{
+        display: block;
+        margin: 20px auto;
+        color: white;
+    }
+    .header nav{
+        background: hsl(257, 27%, 26%);
+        width: 85%;
+        margin-left:-55px;
+        margin-top: 60px;
+        padding: 10px;
+        padding-block: 20px;
+        border-radius: 10px;
+        display: none;
+    }
+    .header nav button{
+        width: 90%;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    .header img{
+        position:absolute;
+    }
+}

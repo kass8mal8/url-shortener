@@ -1,0 +1,86 @@
+.footer-intro,.footer-links{
+    width: 87vw;
+    margin-left: -20px;
+    padding: 20px;
+}
+
+.footer button,.footer h3{
+    color: white;
+    margin: 10px auto;
+}
+
+.footer h2{
+    color: white;
+    margin: 5 auto auto 40px;
+    letter-spacing: 2px;
+}
+
+.footer-intro{
+    text-align: center;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url(../assets/images/bg-boost-mobile.svg);
+}
+
+.footer-links{
+    background: hsl(260, 8%, 14%);
+}
+
+.footer li{
+    list-style: none;
+    display: block;
+    margin: 5px auto;
+    font-size: 12px;
+}
+
+.footer li:hover{
+    cursor: pointer;
+    color: hsl(180, 66%, 49%);
+}
+
+.footer h5{
+    color: white;
+    font-weight: 500;
+}
+
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons{
+    color: white;
+    font-size: 20px;
+}
+.icons:hover{
+    color: hsl(180, 66%, 49%);
+    cursor: pointer;
+}
+
+@media screen and (min-width:800px) {
+    .footer-intro,.footer-links{
+        width: 96vw;
+        margin-left: -60px;
+    }
+    .footer-links{
+        display: grid;
+        grid-template-columns:20% 20% 20% 20% 20%;
+    }
+    .footer-intro{
+        background-image: url(../assets/images/bg-boost-desktop.svg);
+    }
+    .footer button{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .socials li{
+        margin: auto -10px;
+    }
+    .socials{
+        margin-top: 20px;
+    }
+    .footer-links div{
+        margin:20px auto;
+    }
+}

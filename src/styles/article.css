@@ -1,5 +1,5 @@
 .article{
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
 h3,h2{
@@ -11,13 +11,20 @@ h3,h2{
     background: whitesmoke;
     width: 90%;
     padding: 20px;
-    margin: 20px auto;
+    margin: 40px auto;
+    position: relative;
 }
 
 .products nav img {
     background: hsl(257, 27%, 26%);
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-top: -40px;
+}
+
+article{
+    margin: 70px auto;
 }
 
 @media screen and (min-width:800px) {
