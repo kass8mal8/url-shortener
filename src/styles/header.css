@@ -6,8 +6,13 @@
     width: 60px;
     color:hsl(257, 7%, 63%);
     position:absolute;
-    right: 20px;
-    top: 30px;
+    right: 5px;
+    top: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(257, 7%, 63%);
 }
 
 .header ul li {
@@ -15,11 +20,6 @@
     display: inline-flex;
     justify-content: space-between;
     margin: auto 10px;
-}
-
-.header ul li:hover{
-    cursor: pointer;
-    color: hsl(257, 27%, 26%);
 }
 
 .header nav{
@@ -33,6 +33,10 @@
         right: -250%;
         position: absolute;
         top: -8px;
+    }
+    .header ul li:hover,a:hover{
+        cursor: pointer;
+        color: hsl(257, 27%, 26%);
     }
     aside button{
         margin-left: 30px;
@@ -56,15 +60,24 @@
         margin: 20px auto;
         color: white;
     }
+    .btm-nav{
+        border-bottom: 2px solid hsl(259, 17%, 33%);
+        padding-bottom: 15px;
+    }
     .header nav{
         background: hsl(257, 27%, 26%);
-        width: 85%;
-        margin-left:-55px;
-        margin-top: 60px;
-        padding: 10px;
-        padding-block: 20px;
+        width: 80%;
+        margin-left:-47px;
+        margin-top: 50px;
         border-radius: 10px;
         display: none;
+        transition: .5s ease;
+        margin-bottom: 90px;
+        padding-inline: 10px;
+    }
+    .header nav.active{
+        display: block;
+        transition: .5s ease;
     }
     .header nav button{
         width: 90%;

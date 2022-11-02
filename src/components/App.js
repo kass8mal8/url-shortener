@@ -1,19 +1,23 @@
-import Article from "./Article";
-import Footer from "./Footer";
-import Header from "./Header";
-import Main from "./Main";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import '../styles/app.css'
-import Aside from "./Aside";
+import HomePage from "./HomePage";
+import Header from "./Header";
+import Footer from "./Footer";
+import Pricing from "./Pricing";
 
 const App =()=> {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Aside />
-      <Article />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+          <Routes>
+            <Route path="/" element = {<HomePage />} />
+            <Route path="/pricing" element = {<Pricing/>} />
+          </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
+    
   );
 }
 

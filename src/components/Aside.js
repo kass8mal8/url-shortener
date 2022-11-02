@@ -19,25 +19,24 @@ const Aside = () => {
         return data
     }
 
-    const handleSubmit =(e)=> {
-        e.preventDefault()
-        if (inputRef.current.value === " "){
-            document.querySelector('.aside input').style.borderColor = 'red'
+    const handleSubmit =()=> {
+        if (inputRef.current.value === ""){
+            document.querySelector('.aside input').style.borderColor= 'red'
         }
         else{
-            fetchData(url)
+            document.querySelector('.aside input').style.borderColor= 'white'
+            fetchData()
         }
-        inputRef.clear()
     }
 
     return ( 
-        <form className="aside" onSubmit = {handleSubmit}>
+        <div className="aside">
             <input 
                 type="text" 
                 placeholder="Shorten a link here..."
                 ref = {inputRef} />
-            <button>Shorten It!</button>
-        </form>
+            <button onClick={handleSubmit}>Shorten It!</button>
+        </div>
      );
 }
  

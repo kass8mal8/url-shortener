@@ -1,12 +1,18 @@
+@font-face {
+    font-family: poppins-bold;
+    src: url(../assets/Font/Poppins-Bold.ttf);
+}
+
 .main img{
-    width: 100%;
-    margin: 20px auto;
+    width: 94%;
+    margin: 20px 15px;
 }
 
 .main h1{
-    font-weight: 900;
+    font-weight: bolder;
     font-size:30px;
     color: hsl(255, 11%, 22%);
+    font-family: poppins-bold;
 }
 
 .main button{

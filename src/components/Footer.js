@@ -6,10 +6,7 @@ import { faTwitter,faPinterest,faFacebookSquare, faInstagram } from '@fortawesom
 const Footer = () => {
     return ( 
         <div className='footer'>
-            <div className='footer-intro'>
-                <h3> Boost your links today</h3>
-                <button>Get Started</button>
-            </div>
+            
             <div className='footer-links'>
                 <h2>Shortly</h2>
                 <div className='features'>
