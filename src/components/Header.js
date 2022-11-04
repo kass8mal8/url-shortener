@@ -2,9 +2,10 @@ import logo from '../assets/images/logo.svg'
 import '../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 
 const Header = () => {
+    const navigate = useNavigate()
     const toggleNavigation = () => {
         document.querySelector('.header nav').classList.toggle('active')
     }
@@ -21,7 +22,7 @@ const Header = () => {
                     <li className='btm-nav'>Resources</li>
                     <aside>
                         <li>Login</li>
-                        <li><button>Sign Up</button></li>
+                        <li><button onClick={() => navigate('/signup')}>Sign Up</button></li>
                     </aside>
                 </nav>
             </ul>

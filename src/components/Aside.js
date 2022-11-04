@@ -2,13 +2,12 @@ import { useRef, useState } from "react";
 import "../styles/aside.css"
 
 const Aside = () => {
-    const url = 'https://app.shrtco.de/v2/shorten?url=https://github.com/kass8mal8'
     const inputRef = useRef()
     const [data,setData] = useState([])
 
     const fetchData = async()=> {
         try{
-            const res = await fetch(url)
+            const res = await fetch(` https://app.shrtco.de/v2/shorten?url=${inputRef.current.value}`)
             const data = await res.json()
             setData(data)
             console.log(data);

@@ -1,8 +1,9 @@
 import working from '../assets/images/working.svg'
 import '../styles/main.css'
+import {useNavigate} from 'react-router-dom'
 
 const Main = () => {
-    
+    const navigate = useNavigate()
     return (  
         <div className = "main">
             <div>
@@ -13,7 +14,7 @@ const Main = () => {
                 <p> 
                     Build your brand’s recognition and get detailed insights on how your links are performing.
                 </p>
-                <button> Get Started </button>
+                <button onClick={() => navigate('/signup')}> Get Started </button>
 
             </div>
         </div>

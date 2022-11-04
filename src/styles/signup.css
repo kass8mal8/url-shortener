@@ -1,0 +1,61 @@
+.signup-div img{
+    display: none;
+}
+
+.signup-div form{
+    width: 90%;
+    padding: 10px;
+    margin: -30px auto 10px 10px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.signup-div form input{
+    display: block;
+    margin: 20px auto;
+}
+
+.signup-div form button{
+    display: block;  
+    border-radius: 5px;
+    width: 98%;
+    margin-left: 5px;
+    margin: 10px auto;
+}
+
+.signup-div small{
+    color: hsl(260, 8%, 14%);
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+.google-btn{
+    background: hsl(255, 11%, 22%);
+    border-color: hsl(255, 11%, 22%);
+}
+
+@media screen and (min-width:800px) {
+    .signup-div{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 20px;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .signup-div form{
+        width: 80%;
+        margin: 10px 0px;
+    }
+    .signup-div img{
+        display: block;
+        width: 100%;
+    }
+    .signup-div form input{
+        width: 70%;
+    }
+    
+    .signup-div form button{
+        width: 74%;
+        margin-left: 75px;
+    }
+}
