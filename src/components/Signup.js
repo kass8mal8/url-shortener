@@ -18,7 +18,13 @@ const Signup = () => {
     }
 
     const handleEmailSignUp =async()=>{
-        
+        try{
+            const res = await createUserWithEmailAndPassword(auth,emailRef.current.value,passRef.current.value)
+            console.log(res)
+        }
+        catch(error){
+            console.log(error.message)
+        }
     }
     return ( 
         <div className='signup-div'>
