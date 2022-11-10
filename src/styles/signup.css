@@ -1,4 +1,4 @@
-.signup-div img{
+.signup-welcome{
     display: none;
 }
 
@@ -46,9 +46,11 @@
         width: 80%;
         margin: 10px 0px;
     }
-    .signup-div img{
-        display: block;
+    .signup-welcome img{
         width: 100%;
+    }
+    .signup-welcome {
+        display: block;
     }
     .signup-div form input{
         width: 70%;

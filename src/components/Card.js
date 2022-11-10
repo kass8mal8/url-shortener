@@ -3,11 +3,11 @@ const Card = ({monthly_products,yearly_products,isToggled,setIsToggled}) => {
     const handleToggle = () => {
         if (isToggled === false) {
             setIsToggled(true)
-            document.querySelector(".toggle-plan").classList.toggle("active")
+            document.querySelector(".toggle-plan aside").classList.toggle("active")
         }
         else{
             setIsToggled(false)
-            document.querySelector(".toggle-plan").classList.toggle("active")
+            document.querySelector(".toggle-plan aside").classList.toggle("active")
         }
     }
     return ( 

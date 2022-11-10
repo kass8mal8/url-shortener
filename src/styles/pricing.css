@@ -72,10 +72,6 @@
     letter-spacing: 2px;
   }
   
-  .aside:hover {
-    background-color: white;
-  }
-  
   .toggle-plan {
     background-image: linear-gradient(to right,hsl(180, 64%, 60%),hsl(180, 59%, 42%));
     width: 50px;
@@ -100,7 +96,7 @@
   }
   
   .toggle-plan aside.active {
-    margin-left: -20px;
+    margin-left: 3px;
     transition: .3s ease;
   }
   
@@ -130,5 +126,8 @@
     .toggle-plan aside {
       margin-right: 139px;
       margin-top: 12px;
+    }
+    .toggle-plan aside.active{
+      margin-right: 165px;
     }
 }

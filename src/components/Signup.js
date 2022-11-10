@@ -10,22 +10,27 @@ const Signup = () => {
     const passRef = useRef()
     const navigate = useNavigate()
 
-    const handleGoogleSignUp =()=>{
+    const handleGoogleSignUp = async()=>{
         const provider = new GoogleAuthProvider()
-        signInWithPopup(auth,provider)
-        .then(() => navigate('/'))
-        .catch(error => console.log(error.message))
+        try{
+            await signInWithPopup(auth,provider)
+            navigate('/')
+        }
+        catch(error){
+            console.log(error.message);
+        }
     }
 
     const handleEmailSignUp =async()=>{
         try{
-            const res = await createUserWithEmailAndPassword(auth,emailRef.current.value,passRef.current.value)
-            console.log(res)
+            await createUserWithEmailAndPassword(auth,emailRef.current.value,passRef.current.value)
+            navigate('/')
         }
         catch(error){
             console.log(error.message)
         }
     }
+
     return ( 
         <div className='signup-div'>
             <form>
@@ -46,10 +51,16 @@ const Signup = () => {
                     Continue with Google
                 </button>
             </form>
-            <img src={sign_image} alt="sign illustration" />
+            <div className='signup-welcome'>
+                <p>
+                    At Shortly, cutomer satisfaction is our priority.<br/>We are tailored to provide best services for you.<br/>
+                    Get started with ease...
+                </p>
+                <img src={sign_image} alt="sign illustration" />
+            </div>
         </div>
 
-     );
+    );
 }
  
 export default Signup;

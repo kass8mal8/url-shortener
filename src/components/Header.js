@@ -18,8 +18,12 @@ const Header = () => {
                 </li>
                 <nav>
                     <li className='btm-nav'>Features</li>
-                    <li className='btm-nav'><Link to = "/pricing">Pricing</Link></li>
-                    <li className='btm-nav'>Resources</li>
+                    <li className='btm-nav'>
+                        <Link to = "/pricing">Pricing</Link>
+                    </li>
+                    <li className='btm-nav'>
+                        <Link to="/resources">Resources</Link>
+                    </li>
                     <aside>
                         <li>Login</li>
                         <li><button onClick={() => navigate('/signup')}>Sign Up</button></li>
